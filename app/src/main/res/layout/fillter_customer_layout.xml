@@ -2,71 +2,77 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_marginTop="@dimen/margin_sixteen_dp"
     android:layout_marginStart="@dimen/margin_eight_dp"
-    android:layout_marginEnd="@dimen/margin_eight_dp">
+    android:layout_marginEnd="@dimen/margin_eight_dp"
+    android:baselineAligned="false">
+
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="3">
+        android:layout_weight="1"
+        android:orientation="vertical">
         <TextView
-            android:id="@+id/spinnerCustomer1"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:id="@+id/txtSpinnerLable"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/margin_sixteen_dp"
             android:text="@string/select_region"/>
 
-        <TextView
-            android:id="@+id/editLat2"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        <Spinner
+            android:id="@+id/spinnerCustomer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/margin_sixteen_dp"
+            android:layout_marginTop="@dimen/margin_eight_dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtLatLable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sixteen_dp"
             android:text="@string/latitude_lable"/>
 
         <TextView
-            android:id="@+id/editLong3"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:id="@+id/txtLat"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/longitude_lable"/>
+            android:layout_marginStart="@dimen/margin_sixteen_dp"
+            android:hint="@string/latitude"
+            android:layout_marginTop="@dimen/margin_eight_dp" />
+
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="3"
-        android:layout_marginTop="@dimen/margin_sixteen_dp"
-        android:layout_marginStart="@dimen/margin_eight_dp"
-        android:layout_marginEnd="@dimen/margin_eight_dp">
-
-    <Spinner
-        android:id="@+id/spinnerCustomer"
         android:layout_width="0dp"
-        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp" />
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/txtLongLable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sixteen_dp"
+            android:text="@string/longitude_lable"/>
 
-    <EditText
-        android:id="@+id/editLat"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:hint="@string/latitude"/>
+        <TextView
+            android:id="@+id/txtLong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sixteen_dp"
+            android:hint="@string/longitude"
+            android:layout_marginTop="@dimen/margin_eight_dp" />
 
-    <EditText
-        android:id="@+id/editLong"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:hint="@string/longitude"/>
     </LinearLayout>
 
 </LinearLayout>

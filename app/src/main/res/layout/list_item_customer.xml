@@ -7,7 +7,9 @@
     android:orientation="vertical"
     android:paddingBottom="@dimen/margin_eight_dp"
     android:paddingTop="@dimen/margin_eight_dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:elevation="@dimen/margin_eight_dp"
+    android:id="@+id/customerLayout">
 
 
     <TextView

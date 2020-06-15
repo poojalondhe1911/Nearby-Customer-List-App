@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.customerapp.R
 import com.example.customerapp.presentation.view.callback.OnRecyclerObjectClickListener
@@ -54,12 +56,13 @@ class CustomerListActivity : AppCompatActivity(){
     private fun setListner(){
         btnFilter.setOnClickListener {
             viewModel.setCustomerUpdatedFilterInfo(spinnerCustomer.selectedItem as Int,
-                editLat.text.toString(),
-                editLong.text.toString())
+                txtLat.text.toString(),
+                txtLong.text.toString())
         }
     }
     private fun setList(){
-        recyclerViewCustomer.layoutManager = LinearLayoutManager(this)
+        val layoutManager = LinearLayoutManager(this)
+        recyclerViewCustomer.layoutManager = layoutManager
         customerListAdapter = CustomerListAdapter()
         recyclerViewCustomer.adapter = customerListAdapter
         customerListAdapter.setListener(object :
@@ -68,6 +71,11 @@ class CustomerListActivity : AppCompatActivity(){
                 Toast.makeText(this@CustomerListActivity,getString(R.string.invite_sent),Toast.LENGTH_LONG).show()
             }
         })
+        val dividerItemDecoration = DividerItemDecoration(
+            recyclerViewCustomer.context,
+            layoutManager.orientation
+        )
+        recyclerViewCustomer.addItemDecoration(dividerItemDecoration)
     }
 
     private fun loadList(custmorList: List<CustomerUIModel>) {
@@ -85,9 +93,9 @@ class CustomerListActivity : AppCompatActivity(){
             ArrayAdapter(this, android.R.layout.simple_spinner_item,  viewModel.getDistanceValues())
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerCustomer.adapter = dataAdapter
-        editLat.setText(viewModel.getDefaultLat().toString())
-        editLong.setText(viewModel.getDefaultLong().toString())
-        editLat.setSelection(editLat.text.length)
+        txtLat.text = viewModel.getDefaultLat().toString()
+        txtLong.text = viewModel.getDefaultLong().toString()
+
     }
 
 

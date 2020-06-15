@@ -9,7 +9,7 @@
     <string name="invite">Invite</string>
     <string name="latitude">Latitude</string>
     <string name="longitude">Longitude</string>
-    <string name="select_region">Select Region:</string>
+    <string name="select_region">Select Range in KM:</string>
     <string name="latitude_lable">Latitude:</string>
     <string name="longitude_lable">Longitude:</string>
 </resources>

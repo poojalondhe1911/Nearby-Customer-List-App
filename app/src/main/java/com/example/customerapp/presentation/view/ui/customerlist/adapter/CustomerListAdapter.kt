@@ -25,6 +25,7 @@ class CustomerListAdapter() : RecyclerView.Adapter<CustomerListAdapter.ViewHolde
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val myListData = listdata[position]
+        holder.txtId.text = myListData.id.toString()
         holder.txtTitle.text = myListData.name
         holder.customerLayout.setOnClickListener {
             listner.onItemClicked(myListData,position)
@@ -36,6 +37,7 @@ class CustomerListAdapter() : RecyclerView.Adapter<CustomerListAdapter.ViewHolde
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var txtId:TextView = itemView.findViewById(R.id.txtId) as TextView
         var txtTitle: TextView = itemView.findViewById(R.id.txtTitle) as TextView
         var customerLayout:ConstraintLayout = itemView.findViewById(R.id.customerLayout) as ConstraintLayout
     }

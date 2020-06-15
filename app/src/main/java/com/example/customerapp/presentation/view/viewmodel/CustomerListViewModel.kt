@@ -44,7 +44,7 @@ class CustomerListViewModel @Inject constructor(
                     it.latitude.toDouble(),it.longitude.toDouble())
                 customerOriginalList.add(customerUIInfoAllRecords)
             }
-            customerChangedList.sortedBy { it.name }
+            customerChangedList.sortedBy { it.id }
         } as MutableLiveData
 
         return liveData
@@ -63,7 +63,7 @@ class CustomerListViewModel @Inject constructor(
                     long.toDouble(),
                     it.longitude
                 ) <= distance
-            }.sortedBy { it.name }
+            }.sortedBy { it.id }
         }
     }
 

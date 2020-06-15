@@ -30,10 +30,10 @@ open class CustomerMatchers {
         }
     }
 
-     fun isSortedAlphabetically(elementResID: Int): Matcher<View?>? {
+     fun isSorted(elementResID: Int): Matcher<View?>? {
         return object : TypeSafeMatcher<View?>() {
             private val customerNames =
-                ArrayList<String>()
+                ArrayList<Int>()
 
             override fun matchesSafely(item: View?): Boolean {
                 val recyclerView: RecyclerView = item as RecyclerView
@@ -43,9 +43,9 @@ open class CustomerMatchers {
                 customerNames.clear()
                 for (i in 0 until adapter.itemCount) {
                     val view: View = recyclerView.getChildAt(i)
-                    val nameEditText = view.findViewById<TextView>(elementResID)
-                    val name = nameEditText.text.toString()
-                    customerNames.add(name)
+                    val idTextView = view.findViewById<TextView>(elementResID)
+                    val id = idTextView.text.toString()
+                    customerNames.add(id.toInt())
                 }
                 val initial = customerNames
                 initial.sort()

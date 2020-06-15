@@ -56,7 +56,7 @@ class TestCustomerListActivity {
 
     @Test
     fun checkIfAlphabeticallySorted(){
-        onView(withId(R.id.recyclerViewCustomer)).check(matches(CustomerMatchers().isSortedAlphabetically(R.id.txtTitle)))
+        onView(withId(R.id.recyclerViewCustomer)).check(matches(CustomerMatchers().isSorted(R.id.txtId)))
     }
 
 }

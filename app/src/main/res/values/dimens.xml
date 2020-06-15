@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="image_card_height">150dp</dimen>
+    <dimen name="margin_eight_dp">8dp</dimen>
+    <dimen name="margin_sixteen_dp">16dp</dimen>
+    <dimen name="share_image_dimen">18dp</dimen>
+    <dimen name="loader_dimen">25dp</dimen>
+    <dimen name="title_text_size">14sp</dimen>
+    <dimen name="min_clomn_width">250dp</dimen>
+</resources>

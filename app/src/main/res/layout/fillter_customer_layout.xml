@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/margin_sixteen_dp"
+    android:layout_marginStart="@dimen/margin_eight_dp"
+    android:layout_marginEnd="@dimen/margin_eight_dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="3">
+        <TextView
+            android:id="@+id/spinnerCustomer1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/select_region"/>
+
+        <TextView
+            android:id="@+id/editLat2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/latitude_lable"/>
+
+        <TextView
+            android:id="@+id/editLong3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/longitude_lable"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="@dimen/margin_sixteen_dp"
+        android:layout_marginStart="@dimen/margin_eight_dp"
+        android:layout_marginEnd="@dimen/margin_eight_dp">
+
+    <Spinner
+        android:id="@+id/spinnerCustomer"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/editLat"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:hint="@string/latitude"/>
+
+    <EditText
+        android:id="@+id/editLong"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:hint="@string/longitude"/>
+    </LinearLayout>
+
+</LinearLayout>
